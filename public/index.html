@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="index.css">
     <script defer src="index.js"></script>
+    <script src="jquery-3.1.1.min.js"></script>
     <title>首页</title>
 </head>
 <body>
@@ -32,8 +33,8 @@
                 <img src="./img/home_ewm.png" id="top_centre_left_ewm">
             </div>
             <div id="top_centre_right">
-                <input placeholder="搜索 坚果 薯片 果干" class="top_centre_right_text">
-                <input type="button" value="搜索" class="top_centre_right_btn">
+                <input placeholder="搜索 坚果 薯片 果干" class="top_centre_right_text" id="ssl">
+                <input type="button" value="搜索" class="top_centre_right_btn" id="sousuo">
                 <nav id="top_centre_right_nav">
                     <a href="">热门搜索</a>:
                     <a href="">韩国零食</a>
@@ -140,14 +141,16 @@
             </div>
             <div id="centrecentre_down_jpms_jg">
                 <div id="centrecentre_down_jpms_jg_left">
-                    <img src="./img/home_jg.png" class="jpms">
+                    <img src="" class="jpms" >
+                    <!--src="./img/home_jg.png" -->
                     <p class="centrecentre_down_jpms_jg_left_p">精选·夏威夷果265g*2袋</p><br>
                     <p class="centrecentre_down_jpms_jg_left_p">奶香浓郁千万主人推荐
                         <a href="./project/indent/indent.html" target="_blank"><button class="centrecentre_down_jpms_jg_left_btn">立即抢购>></button></a>
                     </p>
                 </div>
                 <div id="centrecentre_down_jpms_jg_right">
-                    <img src="./img/44.png" class="jpms">
+                    <img src="" class="jpms">
+                    <!--src="./img/44.png"-->
                     <p class="centrecentre_down_jpms_jg_left_p">精选·夏威夷果265g*2袋</p><br>
                     <p class="centrecentre_down_jpms_jg_left_p">奶香浓郁千万主人推荐
                         <a href="./project/indent/indent.html"><button class="centrecentre_down_jpms_jg_left_btn">立即抢购></button></a>
@@ -156,21 +159,24 @@
             </div>
             <div id="centrecentre_down_jpms_jg2">
                 <div id="centrecentre_down_jpms_jg2_1">
-                    <img src="./img/45.png" class="jpms">
+                    <img src="" class="jpms">
+                    <!--src="./img/45.png"-->
                     <p class="centrecentre_down_jpms_jg_left_p">精选·夏威夷果265g*2袋</p><br>
                     <p class="centrecentre_down_jpms_jg_left_p">奶香浓郁千万主人推荐
                         <a href="./project/indent/indent.html"><button class="centrecentre_down_jpms_jg_left_btn">立即抢购></button></a>
                     </p>
                 </div>
                 <div id="centrecentre_down_jpms_jg2_2">
-                    <img src="./img/46.png" class="jpms">
+                    <img src="" class="jpms">
+                    <!--src="./img/46.png"-->
                     <p class="centrecentre_down_jpms_jg_left_p">精选·开口松子218g*2袋</p><br>
                     <p class="centrecentre_down_jpms_jg_left_p">好吃不贵
                         <a href="./project/indent/indent.html"><button class="centrecentre_down_jpms_jg_left_btn">立即抢购>></button></a>
                     </p>
                 </div>
                 <div id="centrecentre_down_jpms_jg2_3">
-                    <img src="./img/47.png" class="jpms">
+                    <img src="" class="jpms">
+                    <!--src="./img/47.png"-->
                     <p class="centrecentre_down_jpms_jg_left_p">精选·牛肉粒265g*2袋</p><br>
                     <p class="centrecentre_down_jpms_jg_left_p">店主推荐
                         <a href="./project/indent/indent.html"><button class="centrecentre_down_jpms_jg_left_btn">立即抢购>></button></a>
@@ -187,14 +193,16 @@
             </div>
             <div id="centrecentre_down_xsqg_jg">
                 <div id="centrecentre_down_xsqg_jg_left">
-                    <img src="./img/50.png" class="jpms">
+                    <img src="" class="xsqg">
+                    <!--./img/50.png-->
                     <p class="centrecentre_down_jpms_jg_left_p">精选·夏威夷果265g*2袋</p><br>
                     <p class="centrecentre_down_jpms_jg_left_p">奶香浓郁千万主人推荐
                         <button class="centrecentre_down_jpms_jg_left_btn">立即抢购>></button>
                     </p>
                 </div>
                 <div id="centrecentre_down_xsqg_jg_right">
-                    <img src="./img/51.png" class="jpms">
+                    <img src="" class="xsqg">
+                    <!--./img/51.png-->
                     <p class="centrecentre_down_jpms_jg_left_p">精选·夏威夷果265g*2袋</p><br>
                     <p class="centrecentre_down_jpms_jg_left_p">奶香浓郁千万主人推荐
                         <button class="centrecentre_down_jpms_jg_left_btn">立即抢购>></button>
@@ -203,21 +211,24 @@
             </div>
             <div id="centrecentre_down_xsqg_jg2">
                 <div id="centrecentre_down_xsqg_jg2_1">
-                    <img src="./img/52.png" class="jpms">
+                    <img src="" class="xsqg">
+                    <!--./img/52.png-->
                     <p class="centrecentre_down_jpms_jg_left_p">精选·夏威夷果265g*2袋</p><br>
                     <p class="centrecentre_down_jpms_jg_left_p">奶香浓郁千万主人推荐
                         <button class="centrecentre_down_jpms_jg_left_btn">立即抢购>></button>
                     </p>
                 </div>
                 <div id="centrecentre_down_xsqg_jg2_2">
-                    <img src="./img/53.png" class="jpms">
+                    <img src="" class="xsqg">
+                    <!--./img/53.png-->
                     <p class="centrecentre_down_xsqg_jg_left_p">精选·夏威夷果265g*2袋</p><br>
                     <p class="centrecentre_down_xsqg_jg_left_p">奶香浓郁千万主人推荐
                         <button class="centrecentre_down_xsqg_jg_left_btn">立即抢购>></button>
                     </p>
                 </div>
                 <div id="centrecentre_down_xsqg_jg2_3">
-                    <img src="./img/54.png" class="jpms">
+                    <img src="" class="xsqg">
+                    <!--./img/54.png-->
                     <p class="centrecentre_down_xsqg_jg_left_p">精选·夏威夷果265g*2袋</p><br>
                     <p class="centrecentre_down_xsqg_jg_left_p">奶香浓郁千万主人推荐
                         <button class="centrecentre_down_xsqg_jg_left_btn">立即抢购>></button>
