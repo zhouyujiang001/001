@@ -187,10 +187,10 @@ sousuo.onclick = function () {
     $.post(url + 'select', {
         ssl: ssl.value
     }, function (data, status) {
-       
+
         //console.log(jpms);
         //坚果
-        for(var i=0; i<jpms.length; i++){
+        for(var i=0; i<data.length; i++){
             (function(i){
                 jpms[i].src =data[i].tupian;
             }(i))
@@ -198,7 +198,7 @@ sousuo.onclick = function () {
 
         //jpms[0].src = data[0].tupian;
         //干果
-        for(var i=0; i<xsqg.length;i++){
+        for(var i=0; i<data.length;i++){
             (function(i){
                 xsqg[i].src=data[i].tupian;
             }(i))

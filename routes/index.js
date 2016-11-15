@@ -115,7 +115,7 @@ router.post('/select', function (req, res) {
     res.contentType('json');
 
         var sqlCmd;
-        sqlCmd = 'SELECT * from shangping where ID="' + req.body.ssl + '" or lei="' + req.body.ssl + '"';
+        sqlCmd = 'SELECT * from shangping where ID="' + req.body.ssl + '" or lei="' + req.body.ssl + '"or miaoshu="' + req.body.ssl + '"';
         //console.log(sqlCmd);
         connection.query(sqlCmd, function (error, rows, fields) {
             if (rows.length) {
