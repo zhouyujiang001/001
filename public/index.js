@@ -181,21 +181,36 @@ var ssl = document.getElementById("ssl")
 var jpms = document.getElementsByClassName("jpms");
 var xsqg = document.getElementsByClassName("xsqg");
 
+var classdiv=document.getElementsByClassName("classdiv")
+var classdiv1=document.getElementsByClassName("classdiv1")
 var url = "http://127.0.0.1:3000/";
 
 sousuo.onclick = function () {
+   sessionStorage.kkk=ssl.value;
     $.post(url + 'select', {
         ssl: ssl.value
     }, function (data, status) {
-
         //console.log(jpms);
+        //console.log(data[0].jiaqian)
+        //价钱
+        //第一组
+        for(var i=0; i<data.length; i++){
+            (function(i){
+                classdiv[i].innerHTML ="价钱:"+data[i].jiaqian;
+            }(i))
+        }
+        //第二组
+        for(var i=0; i<data.length; i++){
+            (function(i){
+                classdiv1[i].innerHTML ="价钱:"+data[i].jiaqian;
+            }(i))
+        }
         //坚果
         for(var i=0; i<data.length; i++){
             (function(i){
                 jpms[i].src =data[i].tupian;
             }(i))
         }
-
         //jpms[0].src = data[0].tupian;
         //干果
         for(var i=0; i<data.length;i++){
@@ -203,17 +218,37 @@ sousuo.onclick = function () {
                 xsqg[i].src=data[i].tupian;
             }(i))
         }
-
         if (data.result) {
             alert("查询失败");
             console.log(data);
-
             //location.href="./project/ss/ss.html"
-
         } else {
             alert("查询成功");
             console.log(data);
         }
     });
-}
+};
 
+
+//添加ID
+
+(function(){
+    var btnljgm =document.getElementById("btn_ljgm");
+    var sousuolan = document.getElementById("ssl");
+
+    var url = "http://127.0.0.1:3000/";
+
+    btnljgm.onclick = function () {
+        $.post(url + 'chaid', {
+            sousuolan:sousuolan.value
+        }, function (data, status) {
+
+            if (data.result) {
+                console.log(data);
+
+            } else {
+
+            }
+        });
+    }
+}())

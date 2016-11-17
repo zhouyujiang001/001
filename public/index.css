@@ -349,6 +349,18 @@ a{
     position: relative;
     left: 322px;
 }
+.classdiv{
+    position: relative;
+    top: 14px;
+    left: 20px;
+    color: red;
+}
+.classdiv1{
+    position: relative;
+    top: 14px;
+    left: 20px;
+    color: red;
+}
 #centrecentre_down_jpms_jg_right{
     height: 400px;
     float: left;

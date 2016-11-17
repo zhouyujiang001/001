@@ -75,7 +75,7 @@ router.post('/reg', function (req, res) {
         username: req.body.username,
         UserPwd: req.body.password,
     };
-    console.log(params);
+    //console.log(params);
 
     action_reg(params.Tel, params.username, params.UserPwd, function (result, id) {
         params.result = result;
@@ -111,11 +111,11 @@ function action_reg(tel, name, pwd, callback) {
 //搜索
 
 router.post('/select', function (req, res) {
-    console.log(req.body)
+    //console.log(req.body)
     res.contentType('json');
 
         var sqlCmd;
-        sqlCmd = 'SELECT * from shangping where ID="' + req.body.ssl + '" or lei="' + req.body.ssl + '"or miaoshu="' + req.body.ssl + '"';
+        sqlCmd = 'SELECT * from shangping where ID="' + req.body.ssl + '" or lei="' + req.body.ssl + '"or miaoshu="' + req.body.ssl + '"or jiaqian="' + req.body.ssl + '"';
         //console.log(sqlCmd);
         connection.query(sqlCmd, function (error, rows, fields) {
             if (rows.length) {
@@ -128,3 +128,53 @@ router.post('/select', function (req, res) {
 
 });
 
+//查id
+router.post('/chaid', function (req, res) {
+    //console.log(req.body);
+    //res.contentType('json');
+
+    var sqlCmd = 'update gwc set ID="'+req.body.sousuolan+ '" ';
+    console.log(sqlCmd)
+    connection.query(sqlCmd,function(error, rows, fields){
+        res.send(rows);
+        //console.log(rows);
+    });
+
+});
+
+
+
+
+
+//订单数据
+
+
+router.post('/charu', function (req, res) {
+    //console.log(req.body);
+    //res.contentType('json');
+
+    var sqlCmd = 'update gwc set shuliang="'+req.body.hh+ '" ';
+  console.log(sqlCmd)
+    connection.query(sqlCmd,function(error, rows, fields){
+        res.send(rows);
+       //console.log(rows);
+    });
+
+});
+
+
+
+//onload加载数据
+router.post('/onload', function (req, res) {
+   console.log(req.body)
+    var sqlCmd = 'SELECT * from gwc where ID ='+req.body.id;
+    console.log(sqlCmd)
+    //var sqlCmd = 'SELECT * from gwc where ID="' + req.body.input + '" or jiaqian="' + req.body.input + '"or shuliang="' + req.body.input + '"';
+    connection.query(sqlCmd,function(error, rows, fields){
+        console.log(rows)
+           res.send(rows);
+
+});
+    //console.log(1);
+
+});
